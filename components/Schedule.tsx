@@ -39,7 +39,7 @@ export default function Schedule() {
             href={getFreeClassWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className={`btn btn-primary ${styles.ctaButton}`}
+            className={`btn btn-primary btn-cta-pulse ${styles.ctaButton}`}
           >
             <ChevronIcon />
             Agende agora uma aula grátis

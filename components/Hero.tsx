@@ -26,7 +26,7 @@ export default function Hero() {
                 href={getFreeClassWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-primary"
+                className="btn btn-primary btn-cta-pulse"
               >
                 <WhatsAppIcon />
                 Agendar aula experimental
