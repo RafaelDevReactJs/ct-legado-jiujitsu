@@ -4,18 +4,19 @@ import ImageCarousel from "@/components/ImageCarousel";
 import Location from "@/components/Location";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Footer from "@/components/Footer";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <>
+    <div className={styles.page}>
       <Header />
-      <main>
+      <main className={styles.main}>
         <Hero />
         <ImageCarousel />
         <Location />
       </main>
       <Footer />
       <WhatsAppButton />
-    </>
+    </div>
   );
 }

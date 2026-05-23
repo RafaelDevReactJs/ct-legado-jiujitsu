@@ -1,0 +1,11 @@
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgb(30 58 95 / 0.35), transparent),
+    var(--color-legado-black);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}

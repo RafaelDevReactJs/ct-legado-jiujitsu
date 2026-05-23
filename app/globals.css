@@ -1,19 +1,190 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+  --color-legado-black: #070708;
+  --color-legado-dark: #0f1419;
+  --color-legado-surface: #151b24;
+  --color-legado-blue: #1e3a5f;
+  --color-legado-accent: #3b82f6;
+  --color-legado-accent-hover: #2563eb;
+  --color-legado-gold: #d4a853;
+  --color-legado-gold-light: #ebe1c0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-white: #ffffff;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-hover: #20bd5a;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --header-height: 4.5rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --shadow-card: 0 24px 48px -12px rgb(0 0 0 / 0.55);
+  --shadow-glow-gold: 0 0 60px rgb(212 168 83 / 0.12);
+  --transition-fast: 0.2s ease;
+}
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--color-legado-black);
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+::selection {
+  background-color: rgb(212 168 83 / 0.35);
+  color: var(--color-white);
+}
+
+.section-container {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.section-eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-legado-gold);
+}
+
+.section-title {
+  margin-top: 0.625rem;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  margin: 1rem auto 0;
+  max-width: 40rem;
+  color: var(--color-gray-400);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.section-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.section-header::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin: 1.25rem auto 0;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-legado-gold),
+    transparent
+  );
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-legado-accent), #1d4ed8);
+  color: var(--color-white);
+  box-shadow: 0 12px 28px -8px rgb(59 130 246 / 0.55);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--color-legado-accent-hover), #1e40af);
+  box-shadow: 0 16px 32px -8px rgb(59 130 246 / 0.65);
+}
+
+.btn-outline {
+  border: 1px solid rgb(255 255 255 / 0.22);
+  background: rgb(255 255 255 / 0.04);
+  color: var(--color-white);
+  backdrop-filter: blur(8px);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-legado-gold);
+  color: var(--color-legado-gold-light);
+  background: rgb(212 168 83 / 0.08);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --header-height: 5rem;
   }
 
-  body {
-    @apply bg-legado-black text-white antialiased;
+  .section-container {
+    padding-inline: 1.75rem;
   }
 }
 
-@layer utilities {
+@media (min-width: 1024px) {
   .section-container {
-    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+    padding-inline: 2rem;
   }
 }

@@ -1,0 +1,199 @@
+.section {
+  position: relative;
+  padding-block: 5rem;
+  background: linear-gradient(
+    180deg,
+    var(--color-legado-black) 0%,
+    var(--color-legado-dark) 50%,
+    var(--color-legado-black) 100%
+  );
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 60% 40% at 50% 0%,
+    rgb(212 168 83 / 0.06),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.carousel {
+  position: relative;
+  z-index: 1;
+  margin-inline: auto;
+  max-width: 56rem;
+  padding: 4px;
+  border-radius: calc(var(--radius-xl) + 4px);
+  background: linear-gradient(
+    135deg,
+    rgb(212 168 83 / 0.45),
+    rgb(255 255 255 / 0.08),
+    rgb(59 130 246 / 0.35)
+  );
+  box-shadow: var(--shadow-card), var(--shadow-glow-gold);
+}
+
+.viewport {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: var(--color-legado-surface);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.6s ease;
+}
+
+.slideActive {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slideHidden {
+  opacity: 0;
+  z-index: 0;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgb(0 0 0 / 0.75) 0%,
+    rgb(0 0 0 / 0.15) 45%,
+    transparent 100%
+  );
+}
+
+.caption {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  z-index: 2;
+  max-width: 70%;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-white);
+  text-shadow: 0 2px 8px rgb(0 0 0 / 0.5);
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 0.15);
+  border-radius: 50%;
+  background: rgb(0 0 0 / 0.45);
+  color: var(--color-white);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.navButton:hover {
+  background: rgb(0 0 0 / 0.65);
+  border-color: rgb(212 168 83 / 0.5);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.navButtonPrev {
+  left: 1rem;
+}
+
+.navButtonNext {
+  right: 1rem;
+}
+
+.dots {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 3;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.45);
+  cursor: pointer;
+  transition:
+    width var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.dot:hover {
+  background: rgb(255 255 255 / 0.85);
+}
+
+.dotActive {
+  width: 1.75rem;
+  background: var(--color-legado-gold);
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding-block: 6.5rem;
+  }
+
+  .caption {
+    bottom: 1.5rem;
+    left: 1.5rem;
+    font-size: 1.0625rem;
+  }
+
+  .navButton {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .navButtonPrev {
+    left: 1.25rem;
+  }
+
+  .navButtonNext {
+    right: 1.25rem;
+  }
+
+  .dots {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
