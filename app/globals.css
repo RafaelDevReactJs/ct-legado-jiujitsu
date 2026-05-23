@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-legado-black text-white antialiased;
+  }
+}
+
+@layer utilities {
+  .section-container {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+}
