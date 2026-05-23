@@ -1,4 +1,6 @@
 .header {
+  --logo-height: 3.25rem;
+
   position: fixed;
   top: 0;
   z-index: 50;
@@ -25,11 +27,14 @@
 }
 
 .logo {
-  height: 2.25rem;
+  /* Altere --logo-height no .header para mudar o tamanho */
+  height: var(--logo-height);
   width: auto;
-  max-width: min(200px, 52vw);
+  max-height: calc(var(--header-height) - 0.5rem);
+  max-width: min(360px, 72vw);
   object-fit: contain;
   object-position: left center;
+  filter: drop-shadow(0 0 12px rgb(255 193 7 / 0.25));
 }
 
 .navDesktop {
@@ -167,9 +172,8 @@
 }
 
 @media (min-width: 768px) {
-  .logo {
-    height: 2.75rem;
-    max-width: 240px;
+  .header {
+    --logo-height: 4rem;
   }
 
   .navDesktop {
@@ -184,8 +188,7 @@
 }
 
 @media (min-width: 1024px) {
-  .logo {
-    height: 3rem;
-    max-width: 280px;
+  .header {
+    --logo-height: 4.5rem;
   }
 }

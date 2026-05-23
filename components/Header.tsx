@@ -6,6 +6,7 @@ import styles from "./Header.module.css";
 
 const navLinks = [
   { href: "#inicio", label: "Início" },
+  { href: "#horarios", label: "Horários" },
   { href: "#galeria", label: "Galeria" },
   { href: "#localizacao", label: "Localização" },
 ] as const;

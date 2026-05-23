@@ -15,7 +15,7 @@
   inset: 0;
   background: radial-gradient(
     ellipse 60% 40% at 50% 0%,
-    rgb(212 168 83 / 0.06),
+    rgb(255 193 7 / 0.07),
     transparent
   );
   pointer-events: none;
@@ -35,9 +35,9 @@
   border-radius: calc(var(--radius-xl) + 4px);
   background: linear-gradient(
     135deg,
-    rgb(212 168 83 / 0.45),
-    rgb(255 255 255 / 0.08),
-    rgb(59 130 246 / 0.35)
+    rgb(255 193 7 / 0.55),
+    rgb(255 193 7 / 0.15),
+    rgb(255 193 7 / 0.35)
   );
   box-shadow: var(--shadow-card), var(--shadow-glow-gold);
 }

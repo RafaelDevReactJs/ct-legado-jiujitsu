@@ -16,6 +16,7 @@ export default function Footer() {
         </p>
         <nav className={styles.links} aria-label="Rodapé">
           <a href="#inicio">Início</a>
+          <a href="#horarios">Horários</a>
           <a href="#galeria">Galeria</a>
           <a href="#localizacao">Localização</a>
         </nav>

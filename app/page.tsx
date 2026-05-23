@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ImageCarousel from "@/components/ImageCarousel";
+import Schedule from "@/components/Schedule";
 import Location from "@/components/Location";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Footer from "@/components/Footer";
@@ -12,6 +13,7 @@ export default function Home() {
       <Header />
       <main className={styles.main}>
         <Hero />
+        <Schedule />
         <ImageCarousel />
         <Location />
       </main>

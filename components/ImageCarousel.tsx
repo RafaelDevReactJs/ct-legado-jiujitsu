@@ -31,7 +31,7 @@ export default function ImageCarousel() {
           <p className="section-eyebrow">Nossa academia</p>
           <h2 className="section-title">Conheça o nosso espaço</h2>
           <p className="section-subtitle">
-            Tatame, treinos e comunidade — veja um pouco do ambiente onde você
+            Tatame, treinos e turmas — veja um pouco do ambiente onde você
             vai construir seu legado.
           </p>
         </div>

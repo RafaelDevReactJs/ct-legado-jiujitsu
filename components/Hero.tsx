@@ -1,10 +1,9 @@
-import { academyConfig, getWhatsAppUrl } from "@/lib/academy";
+import { academyConfig, getFreeClassWhatsAppUrl } from "@/lib/academy";
 import styles from "./Hero.module.css";
 
 const highlights = [
   { value: "BJJ", label: "Jiu-Jitsu brasileiro" },
   { value: "Todos", label: "Níveis e idades" },
-  { value: "Horizonte", label: "CE — Planalto" },
 ] as const;
 
 export default function Hero() {
@@ -12,39 +11,48 @@ export default function Hero() {
     <section id="inicio" className={styles.section}>
       <div className={styles.bgGrid} aria-hidden="true" />
       <div className={styles.glowGold} aria-hidden="true" />
-      <div className={styles.glowBlue} aria-hidden="true" />
 
       <div className={`section-container ${styles.content}`}>
-        <div className={styles.wrapper}>
-          <p className={styles.tagline}>{academyConfig.tagline}</p>
+        <div className={styles.layout}>
+          <div className={styles.main}>
+            <p className={styles.tagline}>{academyConfig.tagline}</p>
 
-          <h1 className={styles.title}>{academyConfig.heroTitle}</h1>
+            <h1 className={styles.title}>{academyConfig.heroTitle}</h1>
 
-          <p className={styles.description}>{academyConfig.heroDescription}</p>
+            <p className={styles.description}>{academyConfig.heroDescription}</p>
 
-          <div className={styles.actions}>
-            <a
-              href={getWhatsAppUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-            >
-              <WhatsAppIcon />
-              Agendar aula experimental
-            </a>
-            <a href="#localizacao" className="btn btn-outline">
-              Como chegar
-            </a>
+            <div className={styles.actions}>
+              <a
+                href={getFreeClassWhatsAppUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+              >
+                <WhatsAppIcon />
+                Agendar aula experimental
+              </a>
+              <a href="#horarios" className="btn btn-outline">
+                Ver horários
+              </a>
+            </div>
+
+            <ul className={styles.highlights}>
+              {highlights.map((item) => (
+                <li key={item.label} className={styles.highlight}>
+                  <span className={styles.highlightValue}>{item.value}</span>
+                  <span className={styles.highlightLabel}>{item.label}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <ul className={styles.highlights}>
-            {highlights.map((item) => (
-              <li key={item.label} className={styles.highlight}>
-                <span className={styles.highlightValue}>{item.value}</span>
-                <span className={styles.highlightLabel}>{item.label}</span>
-              </li>
-            ))}
-          </ul>
+          <div className={styles.artwork}>
+            <img
+              src="/assets/Bruto.svg"
+              alt="Mascote CT Legado Jiu-Jitsu"
+              className={styles.brutoImage}
+            />
+          </div>
         </div>
       </div>
     </section>
