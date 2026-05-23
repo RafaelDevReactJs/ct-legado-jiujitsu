@@ -5,12 +5,12 @@ export const academyConfig = {
   heroDescription:
     "O Jiu-Jitsu é a arte suave que ensina tecnica, disciplina, respeito e evolução. No CT Legado, formamos atletas e pessoas melhores — do tatame para a vida.",
   address: {
-    street: "Rua Luiz Inacio de Sousa, 709A",
+    street: "Rua Luiz Inacio de Sousa, 790A",
     neighborhood: "Planalto Horizonte",
     city: "Horizonte",
     state: "CE",
     zipCode: "62884-010",
-    full: "Rua Luiz Inacio de Sousa, 709A — Planalto Horizonte, Horizonte — CE, CEP 62884-010",
+    full: "Rua Luiz Inacio de Sousa, 790A — Planalto Horizonte, Horizonte — CE, CEP 62884-010",
   },
   whatsapp: {
     phone: "558591198567",
@@ -20,9 +20,9 @@ export const academyConfig = {
   },
   maps: {
     embedUrl:
-      "https://www.google.com/maps?q=Rua+Luiz+Inacio+de+Sousa+709A,+Planalto+Horizonte,+Horizonte,+CE,+62884-010&hl=pt&z=17&output=embed",
+      "https://www.google.com/maps?q=Rua+Luiz+Inacio+de+Sousa+790A,+Planalto+Horizonte,+Horizonte,+CE,+62884-010&hl=pt&z=17&output=embed",
     directionsUrl:
-      "https://www.google.com/maps/dir/?api=1&destination=Rua+Luiz+Inacio+de+Sousa+709A,+Planalto+Horizonte,+Horizonte,+CE,+62884-010",
+      "https://www.google.com/maps/dir/?api=1&destination=Rua+Luiz+Inacio+de+Sousa+790A,+Planalto+Horizonte,+Horizonte,+CE,+62884-010",
   },
   schedule: [
     {
