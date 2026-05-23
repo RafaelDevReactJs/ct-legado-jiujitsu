@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   description:
     "Academia de Jiu-Jitsu focada em formar atletas e pessoas melhores. Venha conhecer o CT Legado e comece sua jornada no tatame.",
   keywords: ["jiu-jitsu", "academia", "artes marciais", "CT Legado", "BJJ"],
+  icons: {
+    icon: "/assets/Bruto.svg",
+    shortcut: "/assets/Bruto.svg",
+    apple: "/assets/Bruto.svg",
+  },
 };
 
 export default function RootLayout({
